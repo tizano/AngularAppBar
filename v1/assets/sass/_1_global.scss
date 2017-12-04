@@ -1,0 +1,72 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.3), 0 3px 3px rgba(0, 0, 0, 0.15), 0 3px 2px -2px rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	color: #fff;
+	font-size: 1.25rem;
+	text-shadow: 0 -0.5px 1px rgba(0, 0, 0, 0.15);
+	padding: 1.5em 3em;
+	margin: 0;
+	position: relative;
+	display: inline-block;
+
+	&.styl-material {
+		-webkit-transition: $duration background cubic-bezier(0.4, 0, 0.2, 1);
+		transition: $duration background cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover, &:focus {
+			background: darken($brown, 7);
+			outline: none;
+			cursor: pointer;
+		}
+	}
+
+	&.button-brown {
+		background: $brown;
+	}
+}
+
+.ripple-obj {
+	height: 100%;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	fill: lighten($brown, 15);
+}
+
+.ripple-obj use {
+	opacity: 0;
+}
+
+body {
+	min-height: 110vh;
+	&::-webkit-scrollbar {
+    	width: .7rem;
+		border-left: .2px solid $orange;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $orange;
+	}
+}
+
+
+@include media-breakpoint-up(lg) {
+    .padding-md-left {
+        padding-left: 15.625rem;
+    }
+
+	.hidden-md-up {
+		display: none;
+	}
+}

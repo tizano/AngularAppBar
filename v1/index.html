@@ -1,0 +1,65 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sidenav.css">
+</head>
+<body>
+
+    <div id="backdrop"></div>
+    <nav class="navbar-side" id="sidenav">
+        <a href="" class="navbar-side-link">Accueil</a>
+        <a href="" class="navbar-side-link">Truc</a>
+        <a href="" class="navbar-side-link">Ahebksn</a>
+    </nav>
+
+    <main class="main padding-md-left" id="main-content">
+        <nav class="navbar navbar-top navbar-static" role="navigation">
+            <button class="navbar-toggler hidden-md-up" id="navbar-toggle" type="button">
+            &#9776;
+            </button>
+            <a class="navbar-logo" href="#">
+                <img src="assets/images/bar_logo.png" alt="">
+            </a>
+
+
+
+        <!-- navbar-side will go here -->
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- SVG Sprite -->
+                    <div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+                            <symbol id="ripply-scott" viewBox="0 0 100 100">
+                                <circle id="ripple-shape" cx="1" cy="1" r="1" />
+                            </symbol>
+                        </svg>
+                    </div>
+                    <!-- button component -->
+                    <button id="js-ripple-btn" class="button styl-material button-brown">
+                        Click for Ripple
+                        <svg class="ripple-obj" id="js-ripple">
+                            <use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+                        </svg>
+                    </button>
+                    <!-- /end button component -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/angular-route.js"></script>
+    <script src="assets/libs/TweenMax.min.js"></script>
+    <script src="assets/libs/ripple-config.js"></script>
+    <script src="assets/libs/sidenav.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
