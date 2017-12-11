@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card">
+                <h4 class="card-header">Edit the event : {{eventDetail.event_name | uppercase}}</h4>
+                <div class="card-body">
+                    <p class="card-text">
+                        <div class="input-group input-group-md">
+                            <input type="text" class="form-control" placeholder="Event's name" id="name" ng-model="eventDetail.event_name" value="{{eventDetail.event_name | uppercase}}" />
+                        </div>
+                    </p>
+                    <p class="card-text">
+                        <div class="input-group input-group-md">
+                            <input type="text" class="form-control" id="barname" ng-model="eventDetail.event_barname" placeholder="Bar name" value="{{eventDetail.event_barname}}" />
+                        </div>
+                    </p>
+                    <p class="card-text">
+                        <div class="input-group input-group-md">
+                            <input type="text" class="form-control" id="date" ng-model="eventDetail.event_date" placeholder="Date" value="{{eventDetail.event_date | date: 'yyyy-MM-dd'}}" />
+                        </div>
+                    </p>
+                    <p class="card-text">
+                        <div class="input-group input-group-md">
+                            <input type="text" class="form-control" id="address" ng-model="eventDetail.event_address" placeholder="Address" value="{{eventDetail.event_address}}" />
+                        </div>
+                    </p>
+                    <p class="card-text">
+                        <div class="input-group input-group-md">
+                            <input type="text" class="form-control" id="city" ng-model="eventDetail.event_city" placeholder="City" value="{{eventDetail.event_city}}" />
+                        </div>
+                    </p>
+                    <p class="card-text">
+                        <div class="input-group input-group-md">
+                            <input type="text" class="form-control" id="picture" ng-model="eventDetail.event_picture" placeholder="Picture link" value="{{eventDetail.event_picture}}" />
+                        </div>
+                    </p>
+                    <a href="" class="button styl-material button-brown" ng-click="saveEvent(eventDetail.event_id)">SAVE</a>
+                    <a href="#/events" class="button styl-material button-brown">CANCEL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

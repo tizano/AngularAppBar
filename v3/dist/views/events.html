@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 bloc-button">
+            <a href="#/create-event" class="button styl-material button-brown">CREATE AN EVENT</a>
+        </div>
+        <div ng-repeat="eventItem in eventList" id="{{eventItem.event_id}}" class="col-12 col-sm-6 col-lg-4">
+            <div class="card">
+                <div class="event-picture">
+                    <a href="#/events" class="event_delete" ng-click="delEvent(eventItem.event_id)" ng-if="1 == eventItem.fk_event_user_owner">X</a>
+                    <img class="card-img-top" src="{{eventItem.event_picture}}" alt="{{eventItem.event_barname}}" />
+                    <h2 class="event_barname">{{eventItem.event_name}}</h2>
+                    <div class="event-date">
+                        {{eventItem.event_date | date: 'dd/MM/yyyy'}}
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">{{eventItem.event_barname}}</h3>
+                    <p class="card-text">
+                        <a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination={{eventItem.event_address}}+{{eventItem.event_city}}">
+                            {{eventItem.event_address}} <br/>
+                            {{eventItem.event_city}} <br/>
+                        </a>
+                    </p>
+                    <a href="#" class="button styl-material button-brown">PARTICIPATE</a>
+                    <a href="#/edit-event/{{eventItem.event_id}}" class="button styl-material button-brown" ng-click="getEvent(eventItem.event_id)" ng-if="1 == eventItem.fk_event_user_owner">EDIT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
