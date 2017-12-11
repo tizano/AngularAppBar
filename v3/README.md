@@ -1,4 +1,6 @@
 # BlablaBar
+https://image.noelshack.com/fichiers/2017/50/1/1513003022-bar-logo.png
+
 This is an AngularJS application
 
 ## How to install
